@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AR from "../../images/ar.png";
 import EN from "../../images/en.png";
@@ -100,10 +100,98 @@ const Wrapper = styled.nav`
       }
     }
   }
+  #sidebar {
+    position: fixed;
+    transition: 0.5s;
+    left: ${props => (props.showSidebar ? "0" : "-100%")};
+    top: 0;
+    width: 50%;
+    max-width: 300px;
+    z-index: 4;
+    height: 100vh;
+    background: rgba(0, 51, 94, 0.9);
+    #sidebar-links {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      height: 50%;
+      justify-content: space-around;
+      padding-top: 2rem;
+      li {
+        margin-left: 2rem;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    #sidebar-flags {
+      margin: 2rem 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      li img {
+        width: 80%;
+        max-width: 40px;
+      }
+    }
+  }
 `;
 export default function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <Wrapper>
+    <Wrapper showSidebar={showSidebar}>
+      <div id="sidebar">
+        <ul id="sidebar-links">
+          <li>
+            <a href="#dead">Home</a>
+          </li>
+          <li>
+            <a href="#dead">Properties</a>
+          </li>
+          <li>
+            <a href="#dead">
+              Buyer's Guide
+              <FaCaretDown />
+            </a>
+          </li>
+          <li>
+            <a href="#dead">
+              Services <FaCaretDown />
+            </a>
+          </li>
+          <li>
+            <a href="#dead">News</a>
+          </li>
+          <li>
+            <a href="#dead">About us</a>
+          </li>
+          <li>
+            <a href="#dead">Contact</a>
+          </li>
+        </ul>
+        {/* <ul id="sidebar-flags">
+          <li>
+            <img src={EN} alt="language icon" />
+          </li>
+          <li>
+            <img src={AR} alt="language icon" />
+          </li>
+          <li>
+            <img src={TR} alt="language icon" />
+          </li>
+          <li>
+            <img src={CH} alt="language icon" />
+          </li>
+          <li>
+            <img src={RU} alt="language icon" />
+          </li>
+        </ul> */}
+      </div>
       <div id="top-bar">
         <ul id="lang-flags">
           <li>
@@ -174,7 +262,7 @@ export default function Navbar() {
             <a href="#dead">Contact</a>
           </li>
         </ul>
-        <button>
+        <button onClick={() => setShowSidebar(!showSidebar)}>
           <FaBars />
         </button>
       </div>
