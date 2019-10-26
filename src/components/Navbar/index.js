@@ -13,7 +13,7 @@ const Wrapper = styled.nav`
   left: 0;
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   text-align: center;
   #top-bar {
@@ -54,6 +54,7 @@ const Wrapper = styled.nav`
     display: grid;
     grid-template-columns: 20% 80%;
     background: #fff;
+    border-bottom: #5555;
     ul {
       margin: 0;
       padding: 0;
