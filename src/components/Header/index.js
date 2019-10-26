@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import headerImage from "../../images/header.jpg";
+import Navbar from "../Navbar";
 const Wrapper = styled.header`
   width: 100%;
   height: 100vh;
@@ -16,5 +17,9 @@ const Wrapper = styled.header`
   }
 `;
 export default function Header() {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <Navbar />
+    </Wrapper>
+  );
 }
