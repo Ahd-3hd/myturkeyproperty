@@ -16,11 +16,13 @@ const Wrapper = styled.nav`
   z-index: 3;
   width: 100%;
   text-align: center;
+  transition: 0.4s;
   #top-bar {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     background: #0a4a7f;
     color: #fff;
+    transition: 0.4s;
 
     #lang-flags {
       margin: 0;
@@ -55,6 +57,7 @@ const Wrapper = styled.nav`
     grid-template-columns: 20% 80%;
     background: #fff;
     border-bottom: #5555;
+    transition: 0.3s;
     ul {
       margin: 0;
       padding: 0;

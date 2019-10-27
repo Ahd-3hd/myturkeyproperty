@@ -13,8 +13,9 @@ const Wrapper = styled.div`
   background: rgba(0, 51, 94, 0.9);
   border-radius: 5px;
   display: grid;
+  transition: 0.5s;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  @media (max-width: 750px) {
+  @media (max-width: 870px) {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     text-align: center;
     width: 100%;

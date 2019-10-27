@@ -9,6 +9,7 @@ const Wrapper = styled.header`
   position: relative;
   background: url(${headerImage}) no-repeat;
   background-size: cover;
+  transition: 0.4s;
   ::after {
     content: "";
     width: 100%;
