@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   top: -50px;
   border-radius: 4px;
   transition: 0.3s;
+  color: #555555;
   > div {
     margin: 3rem 0;
     display: grid;
@@ -26,6 +27,7 @@ const Wrapper = styled.div`
     > div img {
       width: 100%;
       max-width: 130px;
+      opacity: 0.7;
     }
   }
   @media (max-width: 850px) {
