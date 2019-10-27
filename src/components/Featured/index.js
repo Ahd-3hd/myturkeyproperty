@@ -14,14 +14,27 @@ const Wrapper = styled.div`
   }
   #featured-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     margin-top: 3rem;
     padding: 1rem;
+    @media (max-width: 1110px) {
+      grid-template-columns: 1fr 1fr;
+      > #featured-item:last-child {
+        grid-area: 1/2;
+      }
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      > #featured-item:last-child {
+        grid-area: auto;
+      }
+    }
     > #featured-item {
       background: url(${featuredImage}) no-repeat;
       background-size: cover;
       height: 350px;
+      width: 100%;
       position: relative;
       border-radius: 4px;
       box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
@@ -75,6 +88,16 @@ export default function Featured() {
     <Wrapper>
       <h2>Featured Properties</h2>
       <div id="featured-container">
+        <div id="featured-item">
+          <div>
+            <h4>Some Interesting title</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+            </p>
+            <button>Find out more</button>
+          </div>
+        </div>
         <div id="featured-item">
           <div>
             <h4>Some Interesting title</h4>
