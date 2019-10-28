@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   #searchbox {
     display: grid;
     width: 50%;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     grid-gap: 1rem;
     margin: 1rem auto;
     background: #0a4a7f;
