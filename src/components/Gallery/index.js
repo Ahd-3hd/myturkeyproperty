@@ -9,12 +9,17 @@ import Button from "@material-ui/core/Button";
 const Wrapper = styled.div`
   #searchbox {
     display: grid;
-    width: 70%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-gap: 1rem;
     margin: 1rem auto;
     background: #0a4a7f;
     padding: 1.5rem;
+    justify-content: center;
+    @media (max-width: 610px) {
+      width: 90%;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
   }
 `;
 export default function Gallery() {
